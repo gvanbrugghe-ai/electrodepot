@@ -3,470 +3,585 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lave-linge hublot pas cher — Electro Dépôt</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<title>Lave-linge hublot — Electro Dépôt</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
   --yellow:#ffd100;
-  --yellow-dark:#e6bc00;
   --black:#1a1a1a;
-  --white:#ffffff;
-  --gray-bg:#f2f2f2;
-  --gray-light:#e8e8e8;
-  --gray-mid:#cccccc;
-  --gray-text:#666666;
-  --gray-dark:#333333;
-  --green:#00882b;
-  --green-bg:#e6f5eb;
+  --white:#fff;
+  --gray-bg:#f4f4f4;
+  --gray-light:#ebebeb;
+  --gray-border:#d8d8d8;
+  --gray-text:#666;
+  --gray-dark:#333;
+  --green:#007a2f;
+  --green-light:#e6f4ec;
   --orange:#e05a00;
-  --orange-bg:#fff0e6;
-  --red:#cc0000;
-  --blue:#0066cc;
-  --font:'Barlow',sans-serif;
-  --font-cond:'Barlow Condensed',sans-serif;
+  --blue:#0052a3;
+  --red-recon:#d32f2f;
+  --font:'Open Sans',Arial,sans-serif;
 }
-body{font-family:var(--font);background:var(--gray-bg);color:var(--black);font-size:14px;line-height:1.4;}
+body{font-family:var(--font);background:var(--white);color:var(--black);font-size:14px;line-height:1.4;}
 a{color:inherit;text-decoration:none;}
 button,input,select{font-family:var(--font);}
-img{max-width:100%;display:block;}
-
-/* ══ TOP PROMO BANNER ══ */
-.top-banner{
-  background:var(--yellow);color:var(--black);
-  text-align:center;padding:8px 16px;
-  font-size:13px;font-weight:600;
-}
-.top-banner a{color:var(--black);text-decoration:underline;}
 
 /* ══ HEADER ══ */
 .header{
-  background:var(--black);padding:10px 16px;
-  display:flex;align-items:center;gap:12px;
-  position:sticky;top:0;z-index:200;
+  background:var(--white);
+  border-bottom:1px solid var(--gray-border);
+  padding:14px 24px;
+  display:flex;align-items:center;gap:20px;
 }
-.logo{
-  font-family:var(--font-cond);font-size:22px;font-weight:800;
-  color:var(--yellow);letter-spacing:.02em;white-space:nowrap;flex-shrink:0;
+
+/* Logo : cercle jaune + bonhomme + ELECTRO DEPOT */
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;}
+.logo-circle{
+  width:62px;height:62px;border-radius:50%;
+  border:3px solid var(--black);background:var(--yellow);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.logo span{color:var(--white);}
+.logo-text{
+  display:flex;flex-direction:column;line-height:1.0;
+}
+.logo-text .l1{font-size:18px;font-weight:800;color:var(--black);text-transform:uppercase;letter-spacing:-.3px;}
+.logo-text .l2{font-size:18px;font-weight:800;color:var(--black);text-transform:uppercase;letter-spacing:-.3px;}
+
+/* Store selector */
+.store-selector{
+  display:flex;align-items:center;gap:8px;
+  flex-shrink:0;
+}
+.store-pin{color:var(--black);}
+.store-info{display:flex;flex-direction:column;line-height:1.2;}
+.store-label{font-size:12px;color:var(--gray-text);}
+.store-name{font-size:15px;font-weight:800;text-transform:uppercase;color:var(--black);}
+.store-change{font-size:12px;color:var(--blue);cursor:pointer;text-decoration:underline;}
+.store-change:hover{color:#003a7a;}
+
+/* Search */
 .header-search{
-  flex:1;display:flex;height:38px;
-  border:2px solid var(--yellow);background:var(--white);
+  flex:1;height:44px;display:flex;
+  border:2px solid var(--gray-border);
+  background:var(--gray-bg);
+  max-width:560px;
 }
 .header-search input{
   flex:1;border:none;background:transparent;
-  padding:0 12px;font-size:14px;outline:none;
+  padding:0 14px;font-size:14px;font-style:italic;
+  color:var(--gray-text);outline:none;
 }
-.header-search button{
-  width:42px;background:var(--yellow);border:none;cursor:pointer;
+.header-search input::placeholder{color:var(--gray-text);font-style:italic;}
+.header-search input:focus{color:var(--black);font-style:normal;}
+.search-btn{
+  width:50px;background:transparent;border:none;
+  border-left:2px solid var(--gray-border);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background .15s;
+}
+.search-btn:hover{background:var(--gray-light);}
+
+/* Header icons */
+.hdr-icons{display:flex;align-items:center;gap:10px;margin-left:auto;}
+.hdr-icon{
+  width:46px;height:46px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;cursor:pointer;
+  color:var(--black);transition:color .15s;
+  border:2px solid transparent;
+}
+.hdr-icon:hover{color:var(--orange);}
+.hdr-cart{
+  width:46px;height:46px;background:var(--yellow);
+  border:2px solid var(--black);
   display:flex;align-items:center;justify-content:center;
+  cursor:pointer;position:relative;
+  transition:background .15s;
 }
-.header-icons{display:flex;align-items:center;gap:16px;}
-.hicon{
-  display:flex;flex-direction:column;align-items:center;gap:2px;
-  cursor:pointer;color:var(--white);font-size:10px;font-weight:500;
-  transition:color .15s;
-}
-.hicon:hover{color:var(--yellow);}
-.hicon svg{color:currentColor;}
-.store-chip{
-  display:flex;align-items:center;gap:6px;
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
-  padding:5px 10px;cursor:pointer;transition:background .15s;white-space:nowrap;
-}
-.store-chip:hover{background:rgba(255,255,255,.2);}
-.store-name{font-size:11px;font-weight:600;color:var(--yellow);}
-.store-sub{font-size:10px;color:rgba(255,255,255,.7);}
-.cart-badge{
-  background:var(--yellow);color:var(--black);
-  width:16px;height:16px;border-radius:50%;
-  font-size:9px;font-weight:800;
+.hdr-cart:hover{background:#e6bc00;}
+.cart-nb{
+  position:absolute;top:-7px;right:-7px;
+  background:var(--black);color:var(--yellow);
+  width:18px;height:18px;border-radius:50%;
+  font-size:10px;font-weight:800;
   display:flex;align-items:center;justify-content:center;
-  position:absolute;top:-5px;right:-7px;
 }
 
 /* ══ NAV ══ */
 .nav{
-  background:#222;
-  display:flex;align-items:center;gap:0;
-  overflow-x:auto;scrollbar-width:none;
-  border-bottom:1px solid #333;
+  background:var(--white);
+  border-bottom:2px solid var(--gray-border);
+  display:flex;align-items:stretch;
+  padding:0 24px;gap:0;
 }
-.nav::-webkit-scrollbar{display:none;}
-.nav-link{
-  font-size:12px;font-weight:600;color:rgba(255,255,255,.8);
-  padding:10px 14px;white-space:nowrap;cursor:pointer;
-  border-bottom:3px solid transparent;transition:color .15s,border-color .15s;
+.nav-item{
+  font-size:13px;font-weight:600;color:var(--black);
+  padding:12px 16px;cursor:pointer;white-space:nowrap;
+  border-bottom:3px solid transparent;
+  display:flex;flex-direction:column;justify-content:center;
+  line-height:1.25;transition:color .12s,border-color .12s;
 }
-.nav-link:hover{color:var(--yellow);}
-.nav-link.active{color:var(--yellow);border-color:var(--yellow);}
+.nav-item:hover{color:var(--orange);border-color:var(--orange);}
+.nav-item.active{border-color:var(--black);}
+.nav-item.recon{background:var(--green);color:var(--white);margin-left:auto;}
+.nav-item.recon:hover{background:#005f24;}
+.nav-item.arriv{background:var(--black);color:var(--yellow);}
+.nav-item.arriv:hover{background:#2a2a2a;}
+.nav-item.reprendre{background:var(--gray-light);font-weight:700;}
 
 /* ══ BREADCRUMB ══ */
 .breadcrumb{
-  background:var(--white);padding:8px 16px;
-  font-size:12px;color:var(--gray-text);
+  padding:9px 24px;font-size:12px;color:var(--gray-text);
   display:flex;gap:6px;align-items:center;flex-wrap:wrap;
   border-bottom:1px solid var(--gray-light);
 }
-.breadcrumb span{cursor:pointer;}
-.breadcrumb span:hover{color:var(--blue);text-decoration:underline;}
-.breadcrumb .active{color:var(--black);font-weight:500;}
-.bc-sep{color:var(--gray-mid);}
+.breadcrumb span{cursor:pointer;color:var(--blue);}
+.breadcrumb span:hover{text-decoration:underline;}
+.breadcrumb .bc-cur{color:var(--black);font-weight:600;}
+.bc-arr{color:var(--gray-text);}
 
-/* ══ PAGE LAYOUT ══ */
-.page{display:flex;gap:0;min-height:calc(100vh - 120px);}
+/* ══ PAGE ══ */
+.page-header{padding:16px 24px 10px;}
+.page-title{font-size:26px;font-weight:800;color:var(--black);margin-bottom:8px;}
+.page-title span{font-size:18px;font-weight:400;color:var(--gray-text);}
+.page-desc{font-size:13px;color:var(--gray-text);line-height:1.6;max-width:900px;}
+.see-more{color:var(--blue);font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:3px;}
+
+.page-body{display:flex;gap:0;padding:0 24px 40px;}
 
 /* ══ SIDEBAR ══ */
 .sidebar{
-  width:220px;flex-shrink:0;background:var(--white);
-  border-right:1px solid var(--gray-light);padding:16px 0;
+  width:290px;min-width:290px;flex-shrink:0;
+  padding-right:20px;padding-top:16px;
 }
-.sidebar-section{border-bottom:1px solid var(--gray-light);padding:0 0 12px;margin-bottom:0;}
-.sidebar-title{
-  font-size:13px;font-weight:700;color:var(--black);
-  padding:10px 16px;cursor:pointer;
+.store-widget{
+  border:1px solid var(--gray-border);padding:12px 14px;
+  margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.store-widget-info{flex:1;}
+.store-widget-label{font-size:11px;color:var(--gray-text);}
+.store-widget-name{font-size:14px;font-weight:800;text-transform:uppercase;}
+.store-widget-change{font-size:12px;color:var(--blue);cursor:pointer;text-decoration:underline;}
+
+.filter-block{margin-bottom:0;border:1px solid var(--gray-border);}
+.filter-title{
+  font-size:15px;font-weight:700;color:var(--black);
+  padding:12px 14px;cursor:pointer;
   display:flex;justify-content:space-between;align-items:center;
-}
-.sidebar-item{
-  padding:6px 16px 6px 24px;font-size:12px;color:var(--gray-dark);
-  cursor:pointer;display:flex;align-items:center;gap:6px;
-  transition:background .12s;
-}
-.sidebar-item:hover{background:var(--gray-bg);}
-.sidebar-item.active{color:var(--blue);font-weight:600;}
-.sidebar-check{
-  width:14px;height:14px;border:1.5px solid var(--gray-mid);
-  border-radius:2px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
-}
-.sidebar-check.checked{background:var(--blue);border-color:var(--blue);}
-.sidebar-count{margin-left:auto;font-size:11px;color:var(--gray-text);}
-
-.filter-tag{
-  display:inline-flex;align-items:center;gap:5px;
-  background:var(--yellow);color:var(--black);
-  font-size:11px;font-weight:600;padding:3px 8px;margin:4px 4px 0 16px;cursor:pointer;
-}
-.filter-tag:hover{background:var(--yellow-dark);}
-
-/* ══ MAIN CONTENT ══ */
-.main{flex:1;padding:0;}
-
-/* ══ TOOLBAR ══ */
-.toolbar{
-  background:var(--white);padding:10px 16px;
-  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-  border-bottom:1px solid var(--gray-light);
-}
-.toolbar-title{font-size:18px;font-weight:800;color:var(--black);}
-.toolbar-count{font-size:13px;color:var(--gray-text);margin-left:4px;}
-.toolbar-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
-.sort-select{
-  height:32px;padding:0 10px;border:1px solid var(--gray-mid);
-  font-size:12px;font-weight:500;background:var(--white);cursor:pointer;outline:none;
-}
-.view-btn{
-  width:32px;height:32px;border:1px solid var(--gray-mid);background:var(--white);
-  display:flex;align-items:center;justify-content:center;cursor:pointer;
-}
-.view-btn.active{border-color:var(--black);background:var(--black);color:var(--white);}
-
-/* ══ PRODUCT LIST ══ */
-.product-list{padding:8px 16px;display:flex;flex-direction:column;gap:0;}
-
-/* ══ PRODUCT CARD — layout horizontal exact Electro Dépôt ══ */
-.product-card{
+  border-bottom:1px solid var(--gray-border);
   background:var(--white);
-  border-bottom:1px solid var(--gray-light);
+}
+.filter-title:hover{background:var(--gray-bg);}
+.filter-body{padding:8px 14px 12px;}
+.filter-item{
+  display:flex;align-items:center;gap:8px;
+  padding:5px 0;cursor:pointer;font-size:13px;
+  color:var(--gray-dark);
+}
+.filter-item:hover{color:var(--black);}
+.filter-item.active{font-weight:600;color:var(--black);}
+.fchip{
+  background:var(--yellow);color:var(--black);
+  font-size:12px;font-weight:700;padding:4px 12px;
+  display:inline-block;cursor:pointer;margin:3px 4px 3px 0;
+  border:2px solid transparent;
+}
+.fchip:hover,.fchip.active{border-color:var(--black);}
+
+/* ══ MAIN ══ */
+.main{flex:1;min-width:0;padding-top:16px;}
+
+/* Toolbar */
+.toolbar{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:12px;padding-bottom:10px;
+  border-bottom:1px solid var(--gray-border);
+}
+.toggle-wrap{
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--black);
+  background:var(--gray-light);padding:7px 14px;
+}
+.toggle{
+  width:38px;height:20px;background:#ccc;border-radius:10px;
+  cursor:pointer;position:relative;transition:background .2s;flex-shrink:0;
+}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:white;transition:left .2s;}
+.toggle.on{background:var(--green);}
+.toggle.on::after{left:20px;}
+.sort-wrap{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:13px;}
+.sort-sel{
+  height:34px;padding:0 10px;border:1px solid var(--gray-border);
+  font-size:13px;font-weight:600;background:var(--white);cursor:pointer;outline:none;
+  min-width:160px;
+}
+
+/* ══ PRODUCT CARD — exact Electro Dépôt 2024 ══ */
+.pcard{
+  background:var(--white);
+  border:1px solid var(--gray-border);
   display:flex;align-items:stretch;
-  padding:14px 12px;gap:16px;
+  margin-bottom:10px;
+  position:relative;
   transition:box-shadow .15s;
+}
+.pcard:hover{box-shadow:0 2px 10px rgba(0,0,0,.12);}
+
+/* Image zone */
+.pcard-img{
+  width:220px;min-width:220px;
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:flex-end;
+  background:var(--white);
+  padding:0 0 12px;
+  position:relative;
+  border-right:1px solid var(--gray-border);
+}
+/* badge BY ELECTRODEPOT en haut de l'image */
+.by-ed{
+  position:absolute;top:0;left:0;right:0;
+  background:var(--yellow);color:var(--black);
+  font-size:11px;font-weight:800;text-transform:uppercase;
+  padding:5px 10px;letter-spacing:.04em;
+  display:flex;align-items:center;gap:5px;
+}
+/* class energie + lettre */
+.energy-wrap{
+  position:absolute;top:36px;left:12px;
+  display:flex;flex-direction:column;align-items:center;
+  width:38px;
+}
+.energy-scale{
+  width:38px;display:flex;flex-direction:column;gap:0;
+}
+.egy-row{
+  height:10px;display:flex;align-items:center;
+  padding-left:4px;font-size:7px;font-weight:700;color:white;
   position:relative;
 }
-.product-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.1);z-index:1;}
-
-/* Badge coins */
-.card-badge-wrap{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:4px;z-index:2;}
-.badge{
-  font-size:10px;font-weight:700;padding:2px 7px;white-space:nowrap;display:inline-block;
-}
-.badge-yellow{background:var(--yellow);color:var(--black);}
-.badge-green{background:var(--green);color:var(--white);}
-.badge-blue{background:var(--blue);color:var(--white);}
-.badge-orange{background:var(--orange);color:var(--white);}
-.badge-gray{background:var(--gray-light);color:var(--gray-dark);}
-
-/* Image */
-.card-img{
-  width:130px;flex-shrink:0;display:flex;align-items:center;
-  justify-content:center;cursor:pointer;padding-top:18px;
-}
-.card-img-inner{
-  width:110px;height:110px;background:var(--gray-bg);
-  display:flex;align-items:center;justify-content:center;
+.egy-A{background:#009b48;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.egy-B{background:#4db847;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.egy-C{background:#afc839;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.egy-D{background:#ffd500;color:#333;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.egy-E{background:#f1a628;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.egy-F{background:#e3211c;clip-path:polygon(0 0,88% 0,100% 50%,88% 100%,0 100%);}
+.egy-active{
   position:relative;
+  box-shadow:2px 0 0 2px var(--black);
+  z-index:2;
+  padding-left:5px;font-size:9px;font-weight:900;
+  height:13px !important;
+  clip-path:polygon(0 0,82% 0,100% 50%,82% 100%,0 100%) !important;
 }
-.card-img-inner img{width:100%;height:100%;object-fit:contain;}
-.energy-badge{
-  position:absolute;bottom:0;right:0;
-  font-size:9px;font-weight:800;padding:2px 5px;color:var(--white);
+/* machine SVG */
+.pcard-machine{width:150px;margin-top:8px;}
+/* comparator */
+.pcard-compare{
+  display:flex;align-items:center;gap:6px;
+  font-size:12px;color:var(--gray-text);cursor:pointer;
+  margin-top:8px;
 }
-.energy-A{background:#00882b;}
-.energy-B{background:#50b800;}
-.energy-C{background:#c8d200;}
-.energy-D{background:#ffc800;color:#333;}
-.energy-E{background:#f08200;color:#fff;}
+.pcard-compare input[type=checkbox]{accent-color:var(--black);cursor:pointer;}
+.pcard-compare:hover{color:var(--black);}
 
-/* Info col */
-.card-info{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;}
-.card-brand{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;}
-.card-name{font-size:14px;font-weight:600;color:var(--black);line-height:1.3;cursor:pointer;}
-.card-name:hover{color:var(--blue);}
-.card-ref{font-size:10px;color:var(--gray-text);}
-.card-specs{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px;}
-.spec-chip{
-  font-size:10px;color:var(--gray-dark);background:var(--gray-bg);
-  padding:2px 6px;border:1px solid var(--gray-light);
+/* Center info */
+.pcard-info{
+  flex:1;padding:14px 16px;min-width:0;
+  display:flex;flex-direction:column;gap:6px;
 }
-.card-rating{display:flex;align-items:center;gap:5px;margin-top:2px;}
-.stars{color:var(--yellow);font-size:12px;letter-spacing:-.5px;}
-.stars-empty{color:var(--gray-light);}
-.rating-val{font-size:11px;font-weight:600;color:var(--gray-dark);}
-.rating-count{font-size:11px;color:var(--gray-text);}
-.card-support{
-  margin-top:4px;font-size:11px;font-weight:600;color:var(--blue);
-  display:flex;align-items:center;gap:4px;
+.pcard-brand-tag{
+  font-size:12px;font-weight:800;color:var(--gray-dark);
+  text-transform:uppercase;letter-spacing:.05em;
 }
-
-/* Price + delivery col — RIGHT */
-.card-right{
-  width:210px;flex-shrink:0;display:flex;flex-direction:column;
-  align-items:flex-end;gap:6px;
+.pcard-name{
+  font-size:18px;font-weight:800;color:var(--black);
+  line-height:1.25;cursor:pointer;
 }
-.card-price-wrap{text-align:right;}
-.price-old{font-size:11px;color:var(--gray-text);text-decoration:line-through;}
-.price-main{
-  font-family:var(--font-cond);font-size:28px;font-weight:800;
-  color:var(--black);line-height:1;
-}
-.price-main sup{font-size:14px;font-weight:700;vertical-align:super;}
-.price-main sub{font-size:14px;font-weight:700;vertical-align:baseline;}
-.price-note{font-size:10px;color:var(--gray-text);}
-
-.btn-add{
-  width:100%;height:38px;background:var(--yellow);color:var(--black);
-  border:none;font-size:13px;font-weight:700;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:6px;
-  transition:background .15s;
-}
-.btn-add:hover{background:var(--yellow-dark);}
-
-/* ══════════════════════════════════════════
-   DELIVERY + STORE AVAILABILITY BLOCK
-   Remplace les infos de dispo existantes
-   ══════════════════════════════════════════ */
-.availability-block{
-  width:100%;display:flex;flex-direction:column;gap:4px;
+.pcard-name:hover{text-decoration:underline;}
+.pcard-rating{display:flex;align-items:center;gap:6px;}
+.stars{font-size:14px;color:var(--yellow);letter-spacing:-.5px;}
+.rtxt{font-size:12px;color:var(--gray-text);}
+.pcard-specs{display:flex;flex-direction:column;gap:3px;margin-top:2px;}
+.pcard-spec{font-size:13px;color:var(--gray-dark);display:flex;align-items:center;gap:5px;}
+.pcard-spec::before{content:'•';color:var(--gray-text);font-size:10px;}
+/* Indice durabilité */
+.durability{
+  display:inline-flex;align-items:center;gap:6px;
   margin-top:4px;
 }
+.durability-box{
+  background:var(--yellow);padding:4px 8px;
+  display:flex;flex-direction:column;align-items:center;
+  border:1px solid #ccc;
+}
+.durability-score{font-size:16px;font-weight:900;color:var(--black);line-height:1;}
+.durability-label{font-size:8px;font-weight:700;color:var(--black);line-height:1;margin-top:1px;}
+.durability-bars{display:flex;gap:2px;margin-top:2px;}
+.dur-bar{height:4px;width:20px;background:var(--gray-border);}
+.dur-bar.fill-f{background:#e3211c;}
+.dur-bar.fill-r{background:#4db847;}
+.durability-rf{font-size:9px;color:var(--gray-text);display:flex;gap:8px;}
+.durability-flag{font-size:9px;color:var(--gray-text);display:flex;align-items:center;gap:3px;margin-top:2px;}
 
-/* Livraison */
+/* Right — prix + CTA + dispo */
+.pcard-right{
+  width:260px;min-width:260px;
+  padding:14px 16px;
+  display:flex;flex-direction:column;gap:8px;
+  border-left:1px solid var(--gray-border);
+}
+.pcard-price{
+  display:flex;align-items:flex-start;gap:0;line-height:1;
+}
+.price-main{font-size:42px;font-weight:900;color:var(--black);line-height:1;}
+.price-sup{font-size:18px;font-weight:900;vertical-align:super;line-height:1;margin-top:4px;display:inline-block;}
+.price-cents{font-size:22px;font-weight:900;line-height:1;margin-top:2px;display:inline-block;}
+.price-mention{font-size:11px;color:var(--gray-text);}
+.btn-add{
+  width:100%;height:48px;
+  background:var(--yellow);color:var(--black);
+  border:2px solid var(--black);
+  font-size:15px;font-weight:800;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  transition:background .15s;
+  text-transform:uppercase;letter-spacing:.03em;
+}
+.btn-add:hover{background:#e6bc00;}
+
+/* ════════════════════════════════
+   DELIVERY / STORE BLOCK
+   Remplace les "Disponible en drive"
+   et "Disponible en livraison"
+   ════════════════════════════════ */
+.avail-block{display:flex;flex-direction:column;gap:4px;}
+
 .avail-row{
   display:flex;align-items:flex-start;gap:7px;
-  font-size:11.5px;line-height:1.3;
-  padding:6px 8px;
-  border-left:3px solid transparent;
+  font-size:12px;line-height:1.35;
+  padding:5px 8px;
 }
-.avail-row.delivery-tomorrow{
-  background:#e6f5eb;border-left-color:var(--green);
+/* drive / livraison disponible */
+.avail-row.ok{background:var(--green-light);}
+/* indisponible */
+.avail-row.ko{background:var(--gray-light);}
+/* retrait magasin */
+.avail-row.store{background:#fff8d6;}
+
+.avail-check{
+  flex-shrink:0;width:16px;height:16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
 }
-.avail-row.delivery-free{
-  background:#e6f5eb;border-left-color:var(--green);
+.avail-check.green{background:var(--green);}
+.avail-check.gray{background:#999;}
+.avail-check.store{background:var(--yellow);border:1px solid #ccc;}
+
+.avail-text{display:flex;flex-direction:column;gap:1px;flex:1;}
+.avail-line1{font-size:12px;}
+.avail-line1 strong{font-weight:700;color:var(--green);}
+.avail-line1 .gray{color:#888;}
+.avail-line1 .store-col{color:var(--black);font-weight:700;}
+.avail-line2{font-size:11px;color:var(--gray-text);}
+.avail-line2 .countdown{
+  font-weight:700;color:var(--orange);
+  background:#fff3eb;padding:0 4px;
+  border:1px solid #ffc29a;display:inline;font-size:11px;
 }
-.avail-row.delivery-unavail{
-  background:#f5f5f5;border-left-color:var(--gray-mid);
-}
-.avail-row.store-row{
-  background:#fff8e6;border-left-color:var(--yellow-dark);
-}
-.avail-icon{flex-shrink:0;margin-top:1px;}
-.avail-main{display:flex;flex-direction:column;gap:1px;}
-.avail-title{font-weight:700;color:var(--black);}
-.avail-title.green{color:var(--green);}
-.avail-title.gray{color:var(--gray-text);}
-.avail-sub{font-size:10.5px;color:var(--gray-text);}
-.avail-sub.orange{color:var(--orange);font-weight:600;}
-.avail-sub.green{color:var(--green);}
-.avail-price{font-weight:700;color:var(--green);font-size:11.5px;}
-.avail-price.gray{color:var(--gray-text);}
-.countdown{
-  font-size:10px;font-weight:700;color:var(--orange);
-  background:var(--orange-bg);padding:1px 5px;display:inline-block;
-}
-/* ══════════════════════════════════════════
+/* ════════════════════════════════
    FIN DELIVERY BLOCK
-   ══════════════════════════════════════════ */
+   ════════════════════════════════ */
 
 /* ══ VALBERG BANNER ══ */
 .valberg-banner{
-  background:linear-gradient(135deg,#1a1a1a 60%,#2d2d2d);
-  margin:0 16px 0;padding:14px 20px;
+  background:var(--black);
+  border:1px solid var(--gray-border);
+  padding:14px 20px;
   display:flex;align-items:center;gap:16px;
-  border:2px solid var(--yellow);
+  margin-bottom:10px;
+  cursor:pointer;
 }
-.valberg-logo-text{
-  font-family:var(--font-cond);font-size:26px;font-weight:800;
-  color:var(--yellow);letter-spacing:.06em;
-}
-.valberg-tagline{font-size:12px;color:rgba(255,255,255,.8);font-weight:500;}
+.valberg-logo-svg{flex-shrink:0;}
+.valberg-name{font-size:26px;font-weight:900;color:var(--yellow);font-style:italic;letter-spacing:.04em;}
+.valberg-sub{font-size:12px;color:rgba(255,255,255,.75);}
 .valberg-cta{
-  margin-left:auto;padding:8px 16px;background:var(--yellow);color:var(--black);
-  font-size:12px;font-weight:700;border:none;cursor:pointer;
+  margin-left:auto;padding:9px 18px;
+  background:var(--yellow);color:var(--black);
+  font-size:13px;font-weight:800;border:2px solid var(--black);cursor:pointer;
+  text-transform:uppercase;flex-shrink:0;
 }
 
-/* ══ SEO FOOTER ══ */
-.seo-section{background:var(--white);padding:24px 16px;margin-top:8px;}
-.seo-title{font-size:16px;font-weight:700;margin-bottom:12px;}
-.seo-text{font-size:12px;color:var(--gray-text);line-height:1.7;max-width:800px;}
-.seo-faq{margin-top:16px;}
-.faq-item{border-bottom:1px solid var(--gray-light);padding:10px 0;}
-.faq-q{font-size:13px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-.faq-a{font-size:12px;color:var(--gray-text);line-height:1.7;margin-top:8px;display:none;}
+/* ══ FAQ ══ */
+.seo-block{padding:20px 0 0;}
+.seo-h{font-size:16px;font-weight:700;margin-bottom:8px;}
+.seo-p{font-size:12px;color:var(--gray-text);line-height:1.7;}
+.faq{margin-top:14px;}
+.faq-item{border-bottom:1px solid var(--gray-border);padding:8px 0;}
+.faq-q{font-size:13px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;}
+.faq-a{font-size:12px;color:var(--gray-text);margin-top:6px;line-height:1.7;display:none;}
 .faq-a.open{display:block;}
 
 /* ══ FOOTER ══ */
-.footer{background:var(--black);color:var(--white);padding:32px 16px 16px;}
-.footer-top{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:24px;}
-.footer-col-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);margin-bottom:12px;}
-.footer-link{font-size:12px;color:rgba(255,255,255,.7);display:block;margin-bottom:7px;cursor:pointer;}
-.footer-link:hover{color:var(--white);}
-.footer-bottom{
-  border-top:1px solid #333;padding-top:14px;
-  display:flex;justify-content:space-between;align-items:center;
-  font-size:11px;color:rgba(255,255,255,.5);
-}
-.footer-logos{display:flex;gap:12px;align-items:center;}
+.footer{background:var(--black);color:white;padding:28px 24px 16px;}
+.footer-top{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:20px;}
+.ft{font-size:11px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;}
+.fl{font-size:12px;color:rgba(255,255,255,.65);display:block;margin-bottom:6px;cursor:pointer;}
+.fl:hover{color:white;}
+.footer-btm{border-top:1px solid #333;padding-top:12px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,.35);}
 
-@media(max-width:900px){
-  .sidebar{display:none;}
-  .footer-top{grid-template-columns:1fr 1fr;}
-}
+@media(max-width:900px){.sidebar{display:none;}.footer-top{grid-template-columns:1fr 1fr;}}
 </style>
 </head>
 <body>
 
-<!-- TOP BANNER -->
-<div class="top-banner">
-  Drive 1h et <strong>livraison gratuite dès 50€</strong> &nbsp;·&nbsp;
-  <a href="#">+ d'infos</a>
-</div>
-
-<!-- HEADER -->
+<!-- ══ HEADER ══ -->
 <header class="header">
-  <div class="logo"><span>ELECTRO</span> DÉPÔT</div>
+  <!-- Logo -->
+  <div class="logo">
+    <div class="logo-circle">
+      <!-- bonhomme stylisé Electro Dépôt -->
+      <svg width="38" height="38" viewBox="0 0 38 38" fill="none">
+        <!-- corps -->
+        <circle cx="19" cy="8" r="4.5" fill="#1a1a1a"/>
+        <path d="M10 14h18l-2 10h-14z" fill="#1a1a1a"/>
+        <!-- jambes -->
+        <path d="M14 24l-3 10h5l3-7 3 7h5l-3-10z" fill="#1a1a1a"/>
+        <!-- bras levé / chariot -->
+        <path d="M10 16l-6 2M28 16l5 4" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <!-- chariot -->
+        <path d="M32 20h5l-1.5 5H33" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <circle cx="34" cy="26.5" r="1.2" fill="#1a1a1a"/>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="l1">ELECTRO</span>
+      <span class="l2">DÉPÔT</span>
+    </div>
+  </div>
+
+  <!-- Magasin -->
+  <div class="store-selector">
+    <div class="store-pin">
+      <svg width="20" height="24" viewBox="0 0 20 24" fill="none"><path d="M10 1C6.13 1 3 4.13 3 8c0 5.63 7 15 7 15s7-9.37 7-15c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#1a1a1a"/></svg>
+    </div>
+    <div class="store-info">
+      <span class="store-label">Votre magasin :</span>
+      <span class="store-name">FACHES-THUMESNIL</span>
+      <span class="store-change">Changer ›</span>
+    </div>
+  </div>
+
+  <!-- Recherche -->
   <div class="header-search">
     <input placeholder="Que recherchez-vous ?"/>
-    <button>
-      <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6.5" stroke="black" stroke-width="2"/><path d="M14 14l4 4" stroke="black" stroke-width="2" stroke-linecap="round"/></svg>
+    <button class="search-btn">
+      <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="9.5" cy="9.5" r="7" stroke="#333" stroke-width="2"/><path d="M15 15l5 5" stroke="#333" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
   </div>
-  <div class="store-chip">
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#ffd100"/></svg>
-    <div>
-      <div class="store-name">Faches-Thumesnil</div>
-      <div class="store-sub">Mon magasin</div>
+
+  <!-- Icons -->
+  <div class="hdr-icons">
+    <div class="hdr-icon">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="9" r="5" stroke="#1a1a1a" stroke-width="1.8"/><path d="M4 24c0-4.97 4.03-9 9-9s9 4.03 9 9" stroke="#1a1a1a" stroke-width="1.8"/></svg>
     </div>
-  </div>
-  <div class="header-icons">
-    <div class="hicon">
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M3 20c0-4.42 3.58-8 8-8s8 3.58 8 8" stroke="currentColor" stroke-width="1.5"/></svg>
-      <span>Mon compte</span>
-    </div>
-    <div class="hicon" style="position:relative;">
-      <svg width="20" height="20" viewBox="0 0 22 22" fill="none"><path d="M3 3h2l2.5 12h9L18.5 8H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="9.5" cy="18" r="1.5" fill="currentColor"/><circle cx="15.5" cy="18" r="1.5" fill="currentColor"/></svg>
-      <span>Panier</span>
-      <span class="cart-badge">0</span>
+    <div class="hdr-cart">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M3 3h3l3 13h11l3-8H7" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="11" cy="20" r="2" fill="#1a1a1a"/><circle cx="19" cy="20" r="2" fill="#1a1a1a"/></svg>
+      <span class="cart-nb">0</span>
     </div>
   </div>
 </header>
 
-<!-- NAV -->
+<!-- ══ NAV ══ -->
 <nav class="nav">
-  <span class="nav-link active">Gros Électroménager</span>
-  <span class="nav-link">Petit-déjeuner</span>
-  <span class="nav-link">Informatique</span>
-  <span class="nav-link">TV, Image, Son</span>
-  <span class="nav-link">Téléphonie</span>
-  <span class="nav-link">Maison, Bricolage</span>
-  <span class="nav-link">Jeux, Jouets</span>
-  <span class="nav-link" style="color:var(--yellow);">Arrivages</span>
+  <div class="nav-item active">Gros<br>Electroménager</div>
+  <div class="nav-item">Petit-déjeuner,<br>Cuisson</div>
+  <div class="nav-item">Maison, Entretien,<br>Beauté</div>
+  <div class="nav-item">Smartphone,<br>Mobilité, Énergie</div>
+  <div class="nav-item">Informatique,<br>Gaming, Tablette</div>
+  <div class="nav-item">TV<br>Image Son</div>
+  <div class="nav-item reprendre">On reprend vos<br>appareils</div>
+  <div class="nav-item recon">Les Produits<br>Reconditionnés</div>
+  <div class="nav-item arriv">Arrivages</div>
 </nav>
 
-<!-- BREADCRUMB -->
+<!-- ══ BREADCRUMB ══ -->
 <div class="breadcrumb">
-  <span>Accueil</span><span class="bc-sep">›</span>
-  <span>Gros Électroménager</span><span class="bc-sep">›</span>
-  <span>Lave-linge</span><span class="bc-sep">›</span>
-  <span class="active">Lave-linge hublot</span>
+  <span>Accueil</span><span class="bc-arr"> › </span>
+  <span>Gros Electroménager</span><span class="bc-arr"> › </span>
+  <span>LAVE-LINGE</span><span class="bc-arr"> › </span>
+  <span class="bc-cur">Lave-linge hublot</span>
 </div>
 
-<!-- PAGE -->
-<div class="page">
+<!-- ══ PAGE HEADER ══ -->
+<div class="page-header">
+  <h1 class="page-title">Lave-linge hublot <span>(21 produits)</span></h1>
+  <p class="page-desc">Découvrez notre gamme de lave-linge hublot, où chaque modèle est sélectionné pour répondre précisément à vos besoins, que ce soit pour une petite famille ou une utilisation intensive. Nous proposons des appareils de grandes marques à prix compétitifs, ainsi que notre propre marque Valberg, reconnue pour sa durabilité, son design soigné, et un excellent rapport usage/prix. Q…</p>
+  <a class="see-more">Voir plus ▾</a>
+</div>
 
-  <!-- SIDEBAR -->
+<!-- ══ BODY ══ -->
+<div class="page-body">
+
+  <!-- ══ SIDEBAR ══ -->
   <aside class="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Type <span style="font-size:10px;color:#999;">▾</span></div>
-      <div class="sidebar-item active"><div class="sidebar-check checked"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>Lave-linge hublot<span class="sidebar-count">24</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Lave-linge top<span class="sidebar-count">8</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Lave-linge séchant<span class="sidebar-count">6</span></div>
+    <div class="store-widget">
+      <svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1C5.24 1 3 3.24 3 6c0 4.5 5 13 5 13s5-8.5 5-13c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 8 4a1.5 1.5 0 0 1 0 3z" fill="#1a1a1a"/></svg>
+      <div class="store-widget-info">
+        <div class="store-widget-label">Votre magasin :</div>
+        <div class="store-widget-name">FACHES-THUMESNIL</div>
+        <div class="store-widget-change">Changer ›</div>
+      </div>
     </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Capacité (kg) <span style="font-size:10px;color:#999;">▾</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>7 kg<span class="sidebar-count">5</span></div>
-      <div class="sidebar-item active"><div class="sidebar-check checked"><svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>8 kg<span class="sidebar-count">9</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>9 kg<span class="sidebar-count">4</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>10 kg<span class="sidebar-count">4</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>11 kg et plus<span class="sidebar-count">2</span></div>
+    <div class="filter-block">
+      <div class="filter-title">Catégorie <span>∧</span></div>
+      <div class="filter-body">
+        <div class="filter-item active">Lave-linge hublot</div>
+        <div class="filter-item">Lave-linge séchant</div>
+        <div class="filter-item">Lave-linge top</div>
+        <div class="filter-item">Kit de superposition, raccordement lave-linge</div>
+        <div class="filter-item">Lave-linge économe en énergie</div>
+      </div>
     </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Marque <span style="font-size:10px;color:#999;">▾</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Valberg<span class="sidebar-count">10</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Samsung<span class="sidebar-count">4</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Beko<span class="sidebar-count">3</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Haier<span class="sidebar-count">3</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Hisense<span class="sidebar-count">2</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>LG<span class="sidebar-count">2</span></div>
+    <div class="filter-block" style="border-top:none;">
+      <div class="filter-title">Capacité en lavage <span style="font-size:12px;color:#aaa;">?</span> <span>∧</span></div>
+      <div class="filter-body">
+        <span class="fchip">5 personnes et + (10 kg et +)</span>
+        <span class="fchip active">3 à 4 personnes (8-9 kg)</span>
+        <span class="fchip">1 à 2 personnes (5-7 kg)</span>
+      </div>
     </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Classe énergie <span style="font-size:10px;color:#999;">▾</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>A<span class="sidebar-count">3</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>B<span class="sidebar-count">5</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>C<span class="sidebar-count">4</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>D<span class="sidebar-count">8</span></div>
+    <div class="filter-block" style="border-top:none;">
+      <div class="filter-title">Marque <span>∧</span></div>
+      <div class="filter-body">
+        <div class="filter-item active">Valberg</div>
+        <div class="filter-item">Samsung</div>
+        <div class="filter-item">Beko</div>
+        <div class="filter-item">Haier</div>
+        <div class="filter-item">Hisense</div>
+        <div class="filter-item">LG</div>
+      </div>
     </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Prix <span style="font-size:10px;color:#999;">▾</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Moins de 250€<span class="sidebar-count">6</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>250€ – 350€<span class="sidebar-count">10</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>350€ – 500€<span class="sidebar-count">6</span></div>
-      <div class="sidebar-item"><div class="sidebar-check"></div>Plus de 500€<span class="sidebar-count">2</span></div>
+    <div class="filter-block" style="border-top:none;">
+      <div class="filter-title">Classe énergétique <span>∨</span></div>
+    </div>
+    <div class="filter-block" style="border-top:none;">
+      <div class="filter-title">Vitesse d'essorage <span>∨</span></div>
+    </div>
+    <div class="filter-block" style="border-top:none;">
+      <div class="filter-title">Prix <span>∨</span></div>
     </div>
   </aside>
 
-  <!-- MAIN -->
+  <!-- ══ MAIN ══ -->
   <main class="main">
-    <!-- TOOLBAR -->
+    <!-- Toolbar -->
     <div class="toolbar">
-      <div>
-        <span class="toolbar-title">Lave-linge hublot</span>
-        <span class="toolbar-count">24 produits</span>
+      <div class="toggle-wrap">
+        <span>Produits reconditionnés</span>
+        <div class="toggle" onclick="this.classList.toggle('on')"></div>
       </div>
-      <div class="toolbar-right">
-        <span style="font-size:12px;color:#666;">Trier par :</span>
-        <select class="sort-select">
-          <option>Les plus populaires</option>
+      <div class="sort-wrap">
+        <span style="font-size:13px;color:#666;">Trier par :</span>
+        <select class="sort-sel">
+          <option>Meilleures ventes</option>
           <option>Prix croissant</option>
           <option>Prix décroissant</option>
           <option>Les mieux notés</option>
@@ -475,759 +590,395 @@ img{max-width:100%;display:block;}
       </div>
     </div>
 
-    <!-- PRODUCT LIST -->
-    <div class="product-list">
-
-      <!-- ══ PRODUIT 1 — Samsung 8kg 269€98 — Livraison demain ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-blue">Arrivage</span>
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
+    <!-- ══ PRODUIT 1 : Valberg 9kg 269€98 · drive 2h · livraison dispo ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" fill="#1a1a1a"/><path d="M4 7h6M7 4v6" stroke="#ffd100" stroke-width="1.5" stroke-linecap="round"/></svg>
+          BY ELECTRODEPOT
         </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#2a2a2a"/><circle cx="40" cy="50" r="26" fill="#3a3a3a"/><circle cx="40" cy="50" r="20" fill="#444"/><circle cx="40" cy="50" r="14" fill="#555" stroke="#888" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#666"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#555"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-D">D</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Samsung</div>
-          <div class="card-name">Lave-linge hublot 8 kg SAMSUNG WW80T4042AE — AI Control, 1400 tr/min</div>
-          <div class="card-ref">Réf. SAMWW80T4042</div>
-          <div class="card-specs">
-            <span class="spec-chip">8 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">53 L</span>
-            <span class="spec-chip">Classe D</span>
-            <span class="spec-chip">Moteur digital</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span class="rating-val">5,0/5</span>
-            <span class="rating-count">(1 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            LE SUPPORT QUALITÉ
+        <!-- Classe énergie -->
+        <div class="energy-wrap">
+          <div class="energy-scale">
+            <div class="egy-row egy-A">A</div>
+            <div class="egy-row egy-B">B</div>
+            <div class="egy-row egy-C">C</div>
+            <div class="egy-row egy-D egy-active">D</div>
+            <div class="egy-row egy-E">E</div>
+            <div class="egy-row egy-F">F</div>
           </div>
         </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>269<sub>98</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#e0e0e0"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a1a1a" stroke="#333" stroke-width="1"/><circle cx="75" cy="88" r="25" fill="#2a2a2a" stroke="#555" stroke-width="1"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text><rect x="16" y="25" width="6" height="6" rx="1" fill="#ffd100"/><circle cx="126" cy="28" r="5" fill="#e0e0e0" stroke="#bbb" stroke-width="1"/></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">VALBERG : LE RAPPORT QUALITÉ/PRIX</div>
+        <div class="pcard-name">Lave-linge hublot 9 kg VALBERG WF 914 A-10 SD W180C</div>
+        <div class="pcard-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rtxt">4.6/5 (123)</span>
+        </div>
+        <div class="pcard-specs">
+          <div class="pcard-spec">Capacité (kg) : 9 kg</div>
+          <div class="pcard-spec">Vitesse d'essorage : 1400 t</div>
+          <div class="pcard-spec">Volume du tambour (L) : 60 L</div>
+        </div>
+        <div class="durability">
+          <div class="durability-box">
+            <div class="durability-score">7.4</div>
+            <div class="durability-label">/10</div>
           </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-tomorrow">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison demain</span>
-                <span class="avail-sub">Mardi 22 avril · <span class="countdown">Commander dans 4h47</span></span>
-                <span class="avail-price">5,99 €</span>
-              </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div>
+            <div class="durability-bars">
+              <div class="dur-bar fill-f"></div>
+              <div class="dur-bar fill-r"></div>
+              <div class="dur-bar fill-f" style="background:#aaa;"></div>
             </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
+            <div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div>
+            <div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div>
+          </div>
+        </div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price">
+          <span class="price-main">269</span>
+          <div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;">
+            <span class="price-sup">€</span>
+            <span class="price-cents">98</span>
+          </div>
+        </div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add">
+          <svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>
+          Ajouter au panier
+        </button>
+        <div class="avail-block">
+          <div class="avail-row ok">
+            <div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="avail-text">
+              <div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div>
+            </div>
+          </div>
+          <div class="avail-row ok">
+            <div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="avail-text">
+              <div class="avail-line1"><strong>Livraison demain</strong> mardi 22 avril</div>
+              <div class="avail-line2"><span class="countdown" id="cd1"></span> · 5,99 €</div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 2 — Valberg 10kg 349€75 — Livraison gratuite 3 jours ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
+    <!-- ══ PRODUIT 2 : Valberg 10kg 349€75 · drive 2h · livraison gratuite 3j ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" fill="#1a1a1a"/><path d="M4 7h6M7 4v6" stroke="#ffd100" stroke-width="1.5" stroke-linecap="round"/></svg>BY ELECTRODEPOT</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B egy-active">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#e8e8e8" stroke="#d0d0d0" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#d8d8d8"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#2a2a2a" stroke="#444" stroke-width="1"/><circle cx="75" cy="88" r="25" fill="#333" stroke="#666" stroke-width="1"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text><circle cx="126" cy="28" r="5" fill="#d8d8d8" stroke="#bbb" stroke-width="1"/></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">VALBERG : LE RAPPORT QUALITÉ/PRIX</div>
+        <div class="pcard-name">Lave-linge hublot 10 kg VALBERG WF 1014 A-10 W566C</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.5/5 (130)</span></div>
+        <div class="pcard-specs">
+          <div class="pcard-spec">Capacité (kg) : 10 kg</div>
+          <div class="pcard-spec">Vitesse d'essorage : 1400 t</div>
+          <div class="pcard-spec">Volume du tambour (L) : 64 L</div>
         </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#e8e8e8"/><circle cx="40" cy="50" r="26" fill="#ddd"/><circle cx="40" cy="50" r="20" fill="#d0d0d0"/><circle cx="40" cy="50" r="14" fill="#c8c8c8" stroke="#aaa" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#bbb"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#ccc"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-B">B</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Valberg</div>
-          <div class="card-name">Lave-linge hublot 10 kg VALBERG WF 1014 A-10 W566C — Moteur induction, 1400 tr/min</div>
-          <div class="card-ref">Réf. VALWF1014W566C</div>
-          <div class="card-specs">
-            <span class="spec-chip">10 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">64 L</span>
-            <span class="spec-chip">Classe B</span>
-            <span class="spec-chip">Induction</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,5/5</span>
-            <span class="rating-count">(130 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            VALBERG : le rapport qualité/prix
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>349<sub>75</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-free">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison gratuite</span>
-                <span class="avail-sub green">Dans 3 jours ouvrés · Jeudi 24 avril</span>
-                <span class="avail-price">Gratuite</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.8</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar fill-r"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">349</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">75</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison gratuite</strong> dans 3 jours ouvrés</div><div class="avail-line2">Jeudi 24 avril · Gratuite</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 3 — Valberg 7kg 289€98 — Livraison gratuite 5 jours ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#c0b090"/><circle cx="40" cy="50" r="26" fill="#a89070"/><circle cx="40" cy="50" r="20" fill="#907858"/><circle cx="40" cy="50" r="14" fill="#806848" stroke="#604830" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#705838"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#a08060"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-D">D</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Valberg</div>
-          <div class="card-name">Lave-linge hublot 7 kg VALBERG WF 714 A-10 W566C2 — 1400 tr/min, 14 programmes</div>
-          <div class="card-ref">Réf. VALWF714W566C2</div>
-          <div class="card-specs">
-            <span class="spec-chip">7 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">46 L</span>
-            <span class="spec-chip">Classe D</span>
-            <span class="spec-chip">14 programmes</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,6/5</span>
-            <span class="rating-count">(62 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            VALBERG : le rapport qualité/prix
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>289<sub>98</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-free">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison gratuite</span>
-                <span class="avail-sub green">Dans 5 jours ouvrés · Lundi 28 avril</span>
-                <span class="avail-price">Gratuite</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 3 : Valberg 7kg 289€98 · drive 2h · livraison gratuite 5j ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" fill="#1a1a1a"/><path d="M4 7h6M7 4v6" stroke="#ffd100" stroke-width="1.5" stroke-linecap="round"/></svg>BY ELECTRODEPOT</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D egy-active">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#c8b898" stroke="#b0a080" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#b8a888"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a1a1a"/><circle cx="75" cy="88" r="25" fill="#2a2a2a" stroke="#444" stroke-width="1"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">VALBERG : LE RAPPORT QUALITÉ/PRIX</div>
+        <div class="pcard-name">Lave-linge hublot 7 kg VALBERG WF 714 A-10 W566C2</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.6/5 (62)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 7 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Volume du tambour (L) : 46 L</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.1</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar" style="background:#aaa;"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">289</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">98</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison gratuite</strong> dans 5 jours ouvrés</div><div class="avail-line2">Lundi 28 avril · Gratuite</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 4 — Valberg 8kg 229€83 — Livraison demain ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-green">Prix bas</span>
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#f0f0f0"/><circle cx="40" cy="50" r="26" fill="#e0e0e0"/><circle cx="40" cy="50" r="20" fill="#d0d0d0"/><circle cx="40" cy="50" r="14" fill="#c0c0c0" stroke="#aaa" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#b0b0b0"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#ddd"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-E">E</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Valberg</div>
-          <div class="card-name">Lave-linge hublot 8 kg VALBERG WF 814 A-10 W180C — 1400 tr/min, départ différé</div>
-          <div class="card-ref">Réf. VALWF814W180C</div>
-          <div class="card-specs">
-            <span class="spec-chip">8 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">54 L</span>
-            <span class="spec-chip">Classe E</span>
-            <span class="spec-chip">Départ différé</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,4/5</span>
-            <span class="rating-count">(178 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            VALBERG : le rapport qualité/prix
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>229<sub>83</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-tomorrow">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison demain</span>
-                <span class="avail-sub">Mardi 22 avril · <span class="countdown">Commander dans 4h47</span></span>
-                <span class="avail-price">5,99 €</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 4 : Valberg 8kg 229€83 · drive 2h · livraison demain ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" fill="#1a1a1a"/><path d="M4 7h6M7 4v6" stroke="#ffd100" stroke-width="1.5" stroke-linecap="round"/></svg>BY ELECTRODEPOT</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E egy-active">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#f0f0f0" stroke="#d8d8d8" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#e0e0e0"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1c1c1c"/><circle cx="75" cy="88" r="22" fill="#2a2a2a" stroke="#555"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">VALBERG : LE RAPPORT QUALITÉ/PRIX</div>
+        <div class="pcard-name">Lave-linge hublot 8 kg VALBERG WF 814 A-10 W180C</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.4/5 (178)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 8 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Volume du tambour (L) : 54 L</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">6.9</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar" style="background:#aaa;"></div><div class="dur-bar fill-r"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">229</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">83</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison demain</strong> mardi 22 avril</div><div class="avail-line2"><span class="countdown" id="cd2"></span> · 5,99 €</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 5 — Valberg 8kg 349€98 — Livraison gratuite 3 jours ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#3a3a3a"/><circle cx="40" cy="50" r="26" fill="#4a4a4a"/><circle cx="40" cy="50" r="20" fill="#555"/><circle cx="40" cy="50" r="14" fill="#606060" stroke="#888" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#707070"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#555"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-C">C</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Valberg</div>
-          <div class="card-name">Lave-linge hublot 8 kg VALBERG WF 814 A-10 S566C2 — Anthracite, induction, 1400 tr/min</div>
-          <div class="card-ref">Réf. VALWF814S566C2</div>
-          <div class="card-specs">
-            <span class="spec-chip">8 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">54 L</span>
-            <span class="spec-chip">Classe C</span>
-            <span class="spec-chip">Anthracite</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,6/5</span>
-            <span class="rating-count">(84 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            VALBERG : le rapport qualité/prix
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>349<sub>98</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-free">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison gratuite</span>
-                <span class="avail-sub green">Dans 3 jours ouvrés · Jeudi 24 avril</span>
-                <span class="avail-price">Gratuite</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 3 jours ouvrés</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 5 : Valberg 8kg 349€98 · drive 3j · livraison gratuite 3j ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" fill="#1a1a1a"/><path d="M4 7h6M7 4v6" stroke="#ffd100" stroke-width="1.5" stroke-linecap="round"/></svg>BY ELECTRODEPOT</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B">B</div><div class="egy-row egy-C egy-active">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#3a3a3a" stroke="#555" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#4a4a4a"/><circle cx="75" cy="88" r="44" fill="white" stroke="#888" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#2a2a2a"/><circle cx="75" cy="88" r="22" fill="#333" stroke="#666"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">VALBERG : LE RAPPORT QUALITÉ/PRIX</div>
+        <div class="pcard-name">Lave-linge hublot 8 kg VALBERG WF 814 A-10 S566C2 — Anthracite</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.6/5 (84)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 8 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Volume du tambour (L) : 54 L</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.2</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar fill-r"></div><div class="dur-bar" style="background:#aaa;"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">349</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">98</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive dans 3 jours ouvrés</strong></div><div class="avail-line2">Jeudi 24 avril · Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison gratuite</strong> dans 3 jours ouvrés</div><div class="avail-line2">Jeudi 24 avril · Gratuite</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ VALBERG BANNER ══ -->
-      <div class="valberg-banner" style="margin:8px 0;">
-        <div>
-          <div class="valberg-logo-text">VALBERG</div>
-          <div class="valberg-tagline">La marque exclusive Electro Dépôt — Testée et approuvée par nos techniciens</div>
-        </div>
-        <button class="valberg-cta">Découvrir Valberg</button>
+    <!-- ══ VALBERG BANNER ══ -->
+    <div class="valberg-banner">
+      <svg class="valberg-logo-svg" width="80" height="55" viewBox="0 0 80 55"><rect x="2" y="8" width="55" height="42" rx="5" fill="#2a2a2a" stroke="#ffd100" stroke-width="1.5"/><circle cx="29" cy="30" r="14" fill="#1a1a1a" stroke="#555" stroke-width="1"/><circle cx="29" cy="30" r="9" fill="#2a2a2a" stroke="#888" stroke-width="1"/><circle cx="29" cy="30" r="4" fill="#333"/><rect x="4" y="12" width="18" height="8" rx="2" fill="#3a3a3a"/><text x="65" y="30" text-anchor="middle" font-size="14" font-weight="900" fill="#ffd100" font-family="Arial" font-style="italic">V</text></svg>
+      <div>
+        <div class="valberg-name">VALBERG</div>
+        <div class="valberg-sub">La marque exclusive Electro Dépôt — testée et approuvée par nos techniciens</div>
       </div>
+      <button class="valberg-cta">Découvrir Valberg →</button>
+    </div>
 
-      <!-- ══ PRODUIT 6 — Beko 8kg 379€ — Livraison gratuite 5 jours ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#e0e8f0"/><circle cx="40" cy="50" r="26" fill="#d0dce8"/><circle cx="40" cy="50" r="20" fill="#c0ccd8"/><circle cx="40" cy="50" r="14" fill="#b0bcc8" stroke="#90a0b0" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#a0b0c0"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#c8d4e0"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-B">B</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Beko</div>
-          <div class="card-name">Lave-linge hublot 8 kg BEKO WTV8745XW0 — SteamCure, 1400 tr/min, moteur induction</div>
-          <div class="card-ref">Réf. BEKWTV8745XW0</div>
-          <div class="card-specs">
-            <span class="spec-chip">8 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">Classe B</span>
-            <span class="spec-chip">SteamCure</span>
-            <span class="spec-chip">Induction</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,3/5</span>
-            <span class="rating-count">(56 avis)</span>
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>379<sub>00</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-free">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison gratuite</span>
-                <span class="avail-sub green">Dans 5 jours ouvrés · Lundi 28 avril</span>
-                <span class="avail-price">Gratuite</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 6 : Beko 8kg 379€ · drive 2h · livraison gratuite 5j ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed" style="background:#e8e8e8;color:#333;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#333" stroke-width="1.2"/><path d="M7 4v5l3 1" stroke="#333" stroke-width="1.2" stroke-linecap="round"/></svg>LE SUPPORT QUALITÉ</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B egy-active">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#dde8f0" stroke="#b0c8e0" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#ccd4e0"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a1a1a"/><circle cx="75" cy="88" r="22" fill="#2a2a2a" stroke="#555"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">Beko</div>
+        <div class="pcard-name">Lave-linge hublot 8 kg BEKO WTV8745XW0 — SteamCure, induction</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.3/5 (56)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 8 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Classe énergétique : B</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.6</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar fill-r"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">379</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">00</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison gratuite</strong> dans 5 jours ouvrés</div><div class="avail-line2">Lundi 28 avril · Gratuite</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 7 — Valberg 9kg 289€98 — Livraison demain ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#e8e0d0"/><circle cx="40" cy="50" r="26" fill="#d8d0c0"/><circle cx="40" cy="50" r="20" fill="#c8c0b0"/><circle cx="40" cy="50" r="14" fill="#b8b0a0" stroke="#a0988c" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#a8a090"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#d0c8b8"/></svg>
-            <span class="energy-badge energy-D">D</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Valberg</div>
-          <div class="card-name">Lave-linge hublot 9 kg VALBERG WF 914 A-10 W566C2 — Beige, 1400 tr/min, induction</div>
-          <div class="card-ref">Réf. VALWF914W566C2</div>
-          <div class="card-specs">
-            <span class="spec-chip">9 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">60 L</span>
-            <span class="spec-chip">Classe D</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,6/5</span>
-            <span class="rating-count">(107 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            VALBERG : le rapport qualité/prix
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>289<sub>98</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-tomorrow">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison demain</span>
-                <span class="avail-sub">Mardi 22 avril · <span class="countdown">Commander dans 4h47</span></span>
-                <span class="avail-price">5,99 €</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 3 jours ouvrés</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 7 : Samsung 8kg 269€98 · drive 2h · livraison demain ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed" style="background:#0052a3;color:white;">★ Arrivage Samsung</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D egy-active">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#2b2b2b" stroke="#444" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#3a3a3a"/><circle cx="75" cy="88" r="44" fill="white" stroke="#888" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a1a1a"/><circle cx="75" cy="88" r="22" fill="#2a2a2a" stroke="#666"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">Samsung</div>
+        <div class="pcard-name">Lave-linge hublot 8 kg SAMSUNG WW80T4042AE — AI Control, 1400 tr/min</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">5.0/5 (1)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 8 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Volume du tambour (L) : 53 L</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.0</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar" style="background:#aaa;"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">269</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">98</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison demain</strong> mardi 22 avril</div><div class="avail-line2"><span class="countdown" id="cd3"></span> · 5,99 €</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 8 — Haier 10kg 399€ — Livraison gratuite 3 jours ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-blue">Classe A</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#1a2a4a"/><circle cx="40" cy="50" r="26" fill="#243050"/><circle cx="40" cy="50" r="20" fill="#2e3a5a"/><circle cx="40" cy="50" r="14" fill="#384464" stroke="#506090" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#485474"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#283858"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-A">A</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Haier</div>
-          <div class="card-name">Lave-linge hublot 10 kg HAIER HW100-BP14929A — i-Pro Series 1, Classe A, 1400 tr/min</div>
-          <div class="card-ref">Réf. HAIHW100BP14929A</div>
-          <div class="card-specs">
-            <span class="spec-chip">10 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">64 L</span>
-            <span class="spec-chip">Classe A</span>
-            <span class="spec-chip">Induction</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span class="rating-val">4,8/5</span>
-            <span class="rating-count">(23 avis)</span>
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>399<sub>00</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-free">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison gratuite</span>
-                <span class="avail-sub green">Dans 3 jours ouvrés · Jeudi 24 avril</span>
-                <span class="avail-price">Gratuite</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 8 : Haier 10kg 399€ Classe A · drive 2h · livraison gratuite 3j ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed" style="background:#007a2f;color:white;">Classe A · Éco-responsable</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A egy-active">A</div><div class="egy-row egy-B">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#1a2840" stroke="#2a4060" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#22304a"/><circle cx="75" cy="88" r="44" fill="white" stroke="#888" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a2840"/><circle cx="75" cy="88" r="22" fill="#22304a" stroke="#405070"/><text x="75" y="93" text-anchor="middle" font-size="14" font-weight="900" fill="#ffd100" font-family="Arial">A-20%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">Haier</div>
+        <div class="pcard-name">Lave-linge hublot 10 kg HAIER HW100-BP14929A — i-Pro Series 1, Classe A</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.8/5 (23)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 10 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Volume du tambour (L) : 64 L · Classe A</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">8.1</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar fill-r"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">399</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">00</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison gratuite</strong> dans 3 jours ouvrés</div><div class="avail-line2">Jeudi 24 avril · Gratuite</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 9 — Samsung 9kg 429€ — Livraison indisponible ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-blue">Arrivage</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#2a2a2a"/><circle cx="40" cy="50" r="26" fill="#3a3a3a"/><circle cx="40" cy="50" r="20" fill="#444"/><circle cx="40" cy="50" r="14" fill="#555" stroke="#888" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#666"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#555"/><path d="M20 20 L26 26" stroke="#ffd100" stroke-width="2"/></svg>
-            <span class="energy-badge energy-B">B</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Samsung</div>
-          <div class="card-name">Lave-linge hublot 9 kg SAMSUNG WW90T754DBX — EcoBubble, moteur digital, 1400 tr/min</div>
-          <div class="card-ref">Réf. SAMWW90T754DBX</div>
-          <div class="card-specs">
-            <span class="spec-chip">9 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">Classe B</span>
-            <span class="spec-chip">EcoBubble</span>
-            <span class="spec-chip">WiFi</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★★</span>
-            <span class="rating-val">5,0/5</span>
-            <span class="rating-count">(1 avis)</span>
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>429<sub>00</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-unavail">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#999" stroke-width="1.3"/><path d="M5 8h6" stroke="#999" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title gray">Livraison indisponible</span>
-                <span class="avail-sub">Non disponible dans votre zone</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 9 : Samsung 9kg 429€ · livraison INDISPONIBLE · drive 2h ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed" style="background:#0052a3;color:white;">★ Arrivage Samsung</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B egy-active">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#2a2a2a" stroke="#555" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#383838"/><circle cx="75" cy="88" r="44" fill="white" stroke="#888" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a1a1a"/><circle cx="75" cy="88" r="22" fill="#2a2a2a" stroke="#555"/><text x="75" y="93" text-anchor="middle" font-size="14" font-weight="900" fill="#ffd100" font-family="Arial">EcoBubble</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">Samsung</div>
+        <div class="pcard-name">Lave-linge hublot 9 kg SAMSUNG WW90T754DBX — EcoBubble, WiFi</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">5.0/5 (1)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 9 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Classe B · WiFi</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.3</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar fill-r"></div><div class="dur-bar" style="background:#aaa;"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">429</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">00</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ko"><div class="avail-check gray"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M2 3.5h5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><span class="gray">Livraison indisponible</span></div><div class="avail-line2">Non disponible dans votre zone</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 10 — LG 9kg 389€ — Livraison gratuite 5 jours ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-yellow">LE SUPPORT QUALITÉ</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#f5f5f5"/><circle cx="40" cy="50" r="26" fill="#eee"/><circle cx="40" cy="50" r="20" fill="#e0e0e0"/><circle cx="40" cy="50" r="14" fill="#d0d0d0" stroke="#b0b0b0" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#c0c0c0"/><rect x="14" y="16" width="20" height="8" rx="2" fill="#ddd"/><text x="50" y="24" font-size="10" font-weight="bold" fill="#cc0000" font-family="sans-serif">LG</text></svg>
-            <span class="energy-badge energy-B">B</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">LG</div>
-          <div class="card-name">Lave-linge hublot 9 kg LG F4WV309S6E — TurboWash 360°, Classe B, 1400 tr/min</div>
-          <div class="card-ref">Réf. LGF4WV309S6E</div>
-          <div class="card-specs">
-            <span class="spec-chip">9 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">Classe B</span>
-            <span class="spec-chip">TurboWash</span>
-            <span class="spec-chip">AI DD</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,4/5</span>
-            <span class="rating-count">(31 avis)</span>
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>389<sub>00</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-free">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison gratuite</span>
-                <span class="avail-sub green">Dans 5 jours ouvrés · Lundi 28 avril</span>
-                <span class="avail-price">Gratuite</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 3 jours ouvrés</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 10 : LG 9kg 389€ · drive 3j · livraison gratuite 5j ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed" style="background:#e8e8e8;color:#333;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#333" stroke-width="1.2"/><path d="M7 4v5l3 1" stroke="#333" stroke-width="1.2" stroke-linecap="round"/></svg>LE SUPPORT QUALITÉ</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B egy-active">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#e8e8e8"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#2a2a2a"/><circle cx="75" cy="88" r="22" fill="#333" stroke="#666"/><text x="75" y="93" text-anchor="middle" font-size="12" font-weight="900" fill="#ffd100" font-family="Arial">TurboWash</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">LG</div>
+        <div class="pcard-name">Lave-linge hublot 9 kg LG F4WV309S6E — TurboWash 360°, AI DD</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.4/5 (31)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 9 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Classe B · TurboWash</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.5</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar fill-r"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">389</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">00</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive dans 3 jours ouvrés</strong></div><div class="avail-line2">Jeudi 24 avril · Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison gratuite</strong> dans 5 jours ouvrés</div><div class="avail-line2">Lundi 28 avril · Gratuite</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 11 — Valberg 7kg 249€83 — Livraison demain ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-green">Prix bas</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#f0f0f0"/><circle cx="40" cy="50" r="26" fill="#e0e0e0"/><circle cx="40" cy="50" r="20" fill="#d0d0d0"/><circle cx="40" cy="50" r="14" fill="#c0c0c0" stroke="#aaa" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#b0b0b0"/><rect x="14" y="16" width="24" height="8" rx="2" fill="#ddd"/><circle cx="58" cy="20" r="3" fill="#ffd100"/></svg>
-            <span class="energy-badge energy-E">E</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Valberg</div>
-          <div class="card-name">Lave-linge hublot 7 kg VALBERG WF 714 A-10 W566C — Blanc, 1400 tr/min</div>
-          <div class="card-ref">Réf. VALWF714W566C</div>
-          <div class="card-specs">
-            <span class="spec-chip">7 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">46 L</span>
-            <span class="spec-chip">Classe E</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,5/5</span>
-            <span class="rating-count">(71 avis)</span>
-          </div>
-          <div class="card-support">
-            <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v4l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-            VALBERG : le rapport qualité/prix
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>249<sub>83</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-tomorrow">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8h10l2-4H4L2 3H1" stroke="#00882b" stroke-width="1.3" stroke-linecap="round" fill="none"/><circle cx="6" cy="12" r="1.5" fill="#00882b"/><circle cx="12" cy="12" r="1.5" fill="#00882b"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title green">Livraison demain</span>
-                <span class="avail-sub">Mardi 22 avril · <span class="countdown">Commander dans 4h47</span></span>
-                <span class="avail-price">5,99 €</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 2h</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 11 : Valberg 7kg 249€83 · drive 2h · livraison demain ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="12" rx="2" fill="#1a1a1a"/><path d="M4 7h6M7 4v6" stroke="#ffd100" stroke-width="1.5" stroke-linecap="round"/></svg>BY ELECTRODEPOT</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E egy-active">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#f0f0f0" stroke="#d0d0d0" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#e0e0e0"/><circle cx="75" cy="88" r="44" fill="white" stroke="#ccc" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#1a1a1a"/><circle cx="75" cy="88" r="22" fill="#2a2a2a" stroke="#555"/><text x="75" y="93" text-anchor="middle" font-size="18" font-weight="900" fill="#ffd100" font-family="Arial">A-40%</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">VALBERG : LE RAPPORT QUALITÉ/PRIX</div>
+        <div class="pcard-name">Lave-linge hublot 7 kg VALBERG WF 714 A-10 W566C</div>
+        <div class="pcard-rating"><span class="stars">★★★★★</span><span class="rtxt">4.5/5 (71)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 7 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Volume du tambour (L) : 46 L</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">6.8</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar" style="background:#aaa;"></div><div class="dur-bar fill-r"></div><div class="dur-bar" style="background:#aaa;"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">249</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">83</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Disponible en drive sous 1h</strong> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ok"><div class="avail-check green"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M1 3l2.5 2.5L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><strong>Livraison demain</strong> mardi 22 avril</div><div class="avail-line2"><span class="countdown" id="cd4"></span> · 5,99 €</div></div></div>
         </div>
       </div>
+    </div>
 
-      <!-- ══ PRODUIT 12 — Hisense 10kg 339€ — Livraison indisponible ══ -->
-      <div class="product-card">
-        <div class="card-badge-wrap">
-          <span class="badge badge-orange">Nouveau</span>
-        </div>
-        <div class="card-img">
-          <div class="card-img-inner">
-            <svg width="80" height="90" viewBox="0 0 80 90" fill="none"><rect x="8" y="10" width="64" height="72" rx="4" fill="#1a1a1a"/><circle cx="40" cy="50" r="26" fill="#252525"/><circle cx="40" cy="50" r="20" fill="#303030"/><circle cx="40" cy="50" r="14" fill="#3a3a3a" stroke="#606060" stroke-width="1"/><circle cx="40" cy="50" r="5" fill="#4a4a4a"/><rect x="14" y="16" width="30" height="8" rx="2" fill="#2a2a2a"/><circle cx="58" cy="20" r="3" fill="blue"/></svg>
-            <span class="energy-badge energy-B">B</span>
-          </div>
-        </div>
-        <div class="card-info">
-          <div class="card-brand">Hisense</div>
-          <div class="card-name">Lave-linge hublot 10 kg HISENSE WFGE1014VA — Classe B, 1400 tr/min, Steam</div>
-          <div class="card-ref">Réf. HISWFGE1014VA</div>
-          <div class="card-specs">
-            <span class="spec-chip">10 kg</span>
-            <span class="spec-chip">1400 tr/min</span>
-            <span class="spec-chip">Classe B</span>
-            <span class="spec-chip">Steam</span>
-            <span class="spec-chip">WiFi</span>
-          </div>
-          <div class="card-rating">
-            <span class="stars">★★★★</span><span class="stars-empty">★</span>
-            <span class="rating-val">4,2/5</span>
-            <span class="rating-count">(14 avis)</span>
-          </div>
-        </div>
-        <div class="card-right">
-          <div class="card-price-wrap">
-            <div class="price-main"><sup>€</sup>339<sub>00</sub></div>
-            <div class="price-note">Payer en plusieurs fois</div>
-          </div>
-          <button class="btn-add">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 2h2l2 9h7l2-5H5" stroke="black" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="13.5" r="1.2" fill="black"/><circle cx="12.5" cy="13.5" r="1.2" fill="black"/></svg>
-            Ajouter au panier
-          </button>
-          <div class="availability-block">
-            <div class="avail-row delivery-unavail">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#999" stroke-width="1.3"/><path d="M5 8h6" stroke="#999" stroke-width="1.3" stroke-linecap="round"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title gray">Livraison indisponible</span>
-                <span class="avail-sub">Non disponible dans votre zone</span>
-              </div>
-            </div>
-            <div class="avail-row store-row">
-              <div class="avail-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3 4 8 4 8s4-5 4-8c0-2.21-1.79-4-4-4zm0 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" fill="#e6bc00"/></svg></div>
-              <div class="avail-main">
-                <span class="avail-title">Retrait en magasin</span>
-                <span class="avail-sub">Faches-Thumesnil · <strong>Dans 3 jours ouvrés</strong></span>
-                <span class="avail-price">Gratuit</span>
-              </div>
-            </div>
-          </div>
+    <!-- ══ PRODUIT 12 : Hisense 10kg 339€ · drive indispo · livraison indispo ══ -->
+    <div class="pcard">
+      <div class="pcard-img">
+        <div class="by-ed" style="background:#555;color:white;">Nouveau · Hisense</div>
+        <div class="energy-wrap"><div class="energy-scale"><div class="egy-row egy-A">A</div><div class="egy-row egy-B egy-active">B</div><div class="egy-row egy-C">C</div><div class="egy-row egy-D">D</div><div class="egy-row egy-E">E</div><div class="egy-row egy-F">F</div></div></div>
+        <svg class="pcard-machine" viewBox="0 0 150 150" fill="none"><rect x="10" y="15" width="130" height="128" rx="6" fill="#1a1a1a" stroke="#333" stroke-width="1.5"/><rect x="16" y="20" width="60" height="20" rx="3" fill="#252525"/><circle cx="75" cy="88" r="44" fill="white" stroke="#888" stroke-width="2"/><circle cx="75" cy="88" r="36" fill="#111"/><circle cx="75" cy="88" r="22" fill="#1a1a1a" stroke="#444"/><text x="75" y="93" text-anchor="middle" font-size="14" font-weight="900" fill="#4499ff" font-family="Arial">Steam</text></svg>
+        <div class="pcard-compare"><input type="checkbox"> Comparer</div>
+      </div>
+      <div class="pcard-info">
+        <div class="pcard-brand-tag">Hisense</div>
+        <div class="pcard-name">Lave-linge hublot 10 kg HISENSE WFGE1014VA — Classe B, Steam, WiFi</div>
+        <div class="pcard-rating"><span class="stars">★★★★</span><span class="rtxt">4.2/5 (14)</span></div>
+        <div class="pcard-specs"><div class="pcard-spec">Capacité (kg) : 10 kg</div><div class="pcard-spec">Vitesse d'essorage : 1400 t</div><div class="pcard-spec">Classe B · WiFi · Steam</div></div>
+        <div class="durability"><div class="durability-box"><div class="durability-score">7.0</div><div class="durability-label">/10</div></div><div><div style="font-size:11px;font-weight:700;margin-bottom:3px;">Indice de durabilité</div><div class="durability-bars"><div class="dur-bar fill-f"></div><div class="dur-bar" style="background:#aaa;"></div><div class="dur-bar fill-r"></div></div><div class="durability-rf"><span style="color:#e3211c;">■ Fiabilité</span><span style="color:#4db847;">■ Réparabilité</span></div><div class="durability-flag">🇫🇷 RÉPUBLIQUE FRANÇAISE</div></div></div>
+      </div>
+      <div class="pcard-right">
+        <div class="pcard-price"><span class="price-main">339</span><div style="display:flex;flex-direction:column;align-items:flex-start;padding-top:4px;"><span class="price-sup">€</span><span class="price-cents">00</span></div></div>
+        <div class="price-mention">Payer en plusieurs fois</div>
+        <button class="btn-add"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M2 2h2.5l2.5 10h8L17 6H5" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" fill="none"/><circle cx="7.5" cy="15" r="1.8" fill="#1a1a1a"/><circle cx="13.5" cy="15" r="1.8" fill="#1a1a1a"/></svg>Ajouter au panier</button>
+        <div class="avail-block">
+          <div class="avail-row ko"><div class="avail-check gray"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M2 3.5h5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><span class="gray">Drive indisponible</span> à Faches-Thumesnil</div></div></div>
+          <div class="avail-row ko"><div class="avail-check gray"><svg width="9" height="7" viewBox="0 0 9 7" fill="none"><path d="M2 3.5h5" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="avail-text"><div class="avail-line1"><span class="gray">Livraison indisponible</span></div><div class="avail-line2">Non disponible dans votre zone</div></div></div>
         </div>
       </div>
+    </div>
 
-    </div><!-- /product-list -->
-
-    <!-- SEO SECTION -->
-    <div class="seo-section">
-      <h2 class="seo-title">Lave-linge hublot pas cher</h2>
-      <p class="seo-text">Découvrez notre gamme de lave-linge hublot, sélectionnés pour répondre à tous vos besoins. Nous proposons des appareils de grandes marques à prix compétitifs, ainsi que notre propre marque Valberg, reconnue pour sa durabilité et son excellent rapport qualité/prix.</p>
-      <div class="seo-faq">
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Qu'est-ce qu'un lave-linge hublot ? <span>+</span></div>
-          <div class="faq-a">Le lave-linge hublot est reconnaissable à son ouverture frontale circulaire. Il s'adapte à tous les intérieurs et permet de poser quelque chose dessus pour optimiser l'espace.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Comment choisir son lave-linge hublot ? <span>+</span></div>
-          <div class="faq-a">Choisissez selon votre capacité (7 kg pour 3 personnes, 8–9 kg pour 4 personnes, 10 kg+ pour les familles nombreuses), la classe énergétique et la vitesse d'essorage (1200 à 1600 tr/min).</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Comment installer un lave-linge hublot ? <span>+</span></div>
-          <div class="faq-a">Raccordez l'arrivée d'eau, la vidange et le câble électrique. Retirez les vis de transport avant utilisation. Electro Dépôt propose un service de livraison avec installation.</div>
-        </div>
+    <!-- SEO -->
+    <div class="seo-block">
+      <h2 class="seo-h">Lave-linge hublot pas cher</h2>
+      <p class="seo-p">Découvrez notre gamme de lave-linge hublot, sélectionnés pour répondre à tous vos besoins. Disponibles en drive 1h à Faches-Thumesnil ou en livraison à domicile rapide.</p>
+      <div class="faq">
+        <div class="faq-item"><div class="faq-q" onclick="tF(this)">Qu'est-ce qu'un lave-linge hublot ? <span>+</span></div><div class="faq-a">Le lave-linge hublot s'ouvre par l'avant. Il s'adapte à tous les intérieurs et peut être superposé avec un sèche-linge.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="tF(this)">Comment choisir sa capacité ? <span>+</span></div><div class="faq-a">7 kg pour 1-3 pers., 8-9 kg pour 3-5 pers., 10 kg+ pour les familles nombreuses ou la literie.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="tF(this)">Comment installer un lave-linge hublot ? <span>+</span></div><div class="faq-a">Raccordez l'arrivée d'eau, la vidange et le câble électrique. Retirez les vis de transport. Electro Dépôt propose un service d'installation.</div></div>
       </div>
     </div>
 
@@ -1235,75 +986,34 @@ img{max-width:100%;display:block;}
 </div>
 
 <!-- FOOTER -->
-<footer class="footer">
+<div class="footer">
   <div class="footer-top">
-    <div>
-      <div class="footer-col-title">Nos services</div>
-      <span class="footer-link">Livraison à domicile</span>
-      <span class="footer-link">Drive 1h</span>
-      <span class="footer-link">Installation à domicile</span>
-      <span class="footer-link">Reprise de vos appareils</span>
-      <span class="footer-link">Paiement en plusieurs fois</span>
-    </div>
-    <div>
-      <div class="footer-col-title">Aide & Contact</div>
-      <span class="footer-link">Service client</span>
-      <span class="footer-link">Suivi de commande</span>
-      <span class="footer-link">Retours et remboursements</span>
-      <span class="footer-link">Trouver un magasin</span>
-      <span class="footer-link">FAQ</span>
-    </div>
-    <div>
-      <div class="footer-col-title">Electro Dépôt</div>
-      <span class="footer-link">Qui sommes-nous ?</span>
-      <span class="footer-link">Marque Valberg</span>
-      <span class="footer-link">Produits reconditionnés</span>
-      <span class="footer-link">Blog conseils</span>
-      <span class="footer-link">Recrutement</span>
-    </div>
-    <div>
-      <div class="footer-col-title">Magasin Faches-Thumesnil</div>
-      <span class="footer-link">📍 Rue de la Lys, 59155</span>
-      <span class="footer-link">🕐 Lun–Sam : 9h00–19h00</span>
-      <span class="footer-link">📞 03 20 XX XX XX</span>
-      <span class="footer-link" style="color:var(--yellow);font-weight:600;">Drive disponible • Retrait 1h</span>
-    </div>
+    <div><div class="ft">Services</div><span class="fl">Livraison à domicile</span><span class="fl">Drive 1h</span><span class="fl">Installation</span><span class="fl">Reprise d'appareils</span></div>
+    <div><div class="ft">Aide</div><span class="fl">Service client</span><span class="fl">Suivi de commande</span><span class="fl">Retours</span><span class="fl">FAQ</span></div>
+    <div><div class="ft">Electro Dépôt</div><span class="fl">Qui sommes-nous</span><span class="fl">Marque Valberg</span><span class="fl">Reconditionnés</span></div>
+    <div><div class="ft">Magasin Faches-Thumesnil</div><span class="fl">📍 Rue de la Lys, 59155</span><span class="fl">🕐 Lun-Sam 9h-19h</span><span class="fl" style="color:var(--yellow);font-weight:700;">✓ Drive disponible · 1h</span></div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2025 Electro Dépôt — Tous droits réservés</span>
-    <div style="display:flex;gap:16px;font-size:11px;">
-      <span style="cursor:pointer;">Mentions légales</span>
-      <span style="cursor:pointer;">CGV</span>
-      <span style="cursor:pointer;">Cookies</span>
-      <span style="cursor:pointer;">Données personnelles</span>
-    </div>
+  <div class="footer-btm">
+    <span>© 2025 Electro Dépôt</span>
+    <div style="display:flex;gap:14px;"><span style="cursor:pointer;">Mentions légales</span><span style="cursor:pointer;">CGV</span><span style="cursor:pointer;">Cookies</span></div>
   </div>
-</footer>
+</div>
 
 <script>
-function toggleFaq(el){
-  var a=el.nextElementSibling;
-  var isOpen=a.classList.contains('open');
-  a.classList.toggle('open');
-  el.querySelector('span').textContent=isOpen?'+':'−';
-}
-
-/* Countdown live update */
-function updateCountdowns(){
+var cdIds=['cd1','cd2','cd3','cd4'];
+function tick(){
   var now=new Date();
-  var cutoff=new Date();
-  cutoff.setHours(17,47,0,0);
-  if(now>cutoff)cutoff.setDate(cutoff.getDate()+1);
-  var diff=cutoff-now;
-  if(diff<0)diff=0;
-  var h=Math.floor(diff/3600000);
-  var m=Math.floor((diff%3600000)/60000);
-  var s=Math.floor((diff%60000)/1000);
+  var cut=new Date();cut.setHours(17,47,0,0);
+  if(now>=cut)cut.setDate(cut.getDate()+1);
+  var d=Math.max(0,cut-now);
+  var h=Math.floor(d/3600000);
+  var m=Math.floor((d%3600000)/60000);
+  var s=Math.floor((d%60000)/1000);
   var str='Commander dans '+h+'h'+String(m).padStart(2,'0')+'m'+String(s).padStart(2,'0')+'s';
-  document.querySelectorAll('.countdown').forEach(function(el){el.textContent=str;});
+  cdIds.forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=str;});
 }
-setInterval(updateCountdowns,1000);
-updateCountdowns();
+setInterval(tick,1000);tick();
+function tF(el){var a=el.nextElementSibling;var op=a.classList.toggle('open');el.querySelector('span').textContent=op?'−':'+';}
 </script>
 </body>
 </html>
